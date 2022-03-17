@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-core-plugins-extractor",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "tailwindcss-core-plugins-extractor",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
