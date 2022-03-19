@@ -15,7 +15,8 @@
     "clean": "node scripts/clean.js",
     "ci:extract": "node scripts/extract.js",
     "ci:lint": "eslint --fix",
-    "ci:check": "node scripts/check.js"
+    "ci:check": "node scripts/check.js",
+    "ci:theme": "node scripts/theme.js"
   },
   "repository": {
     "type": "git",

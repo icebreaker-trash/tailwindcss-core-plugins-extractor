@@ -3,6 +3,7 @@ const dlv = require('dlv')
 const defaultConfig = require('tailwindcss/resolveConfig')(
   require('tailwindcss/defaultConfig')
 )
+const screens = require('tailwindcss/defaultTheme').screens
 const corePlugins = require('tailwindcss/lib/corePlugins.js').corePlugins
 
 const keys = Object.keys(corePlugins)
@@ -125,6 +126,13 @@ async function main () {
     })
     result.push(`import ${key} from './corePlugins/${key}'`)
   }
+
+  const str = `export default ${JSON.stringify(screens)}`
+  await fs.writeFile('./src/theme/screens.ts', str, {
+    encoding: 'utf-8'
+  })
+  result.push("import screens from './theme/screens'")
+  keys.push('screens')
   result.push(`export { ${keys.join(',')} }`)
   const exportCode = result.join('\n')
   await fs.writeFile('./src/index.ts', exportCode, {
