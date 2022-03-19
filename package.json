@@ -1,9 +1,8 @@
 {
   "name": "tailwindcss-core-plugins-extractor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tailwindcss-core-plugins-extractor",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "dev": "yarn dts && cross-env NODE_ENV=development rollup -cw",

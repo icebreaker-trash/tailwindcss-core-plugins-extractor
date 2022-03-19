@@ -4,8 +4,8 @@ import commonjs from '@rollup/plugin-commonjs'
 import pkg from './package.json'
 // import json from '@rollup/plugin-json'
 // import replace from '@rollup/plugin-replace'
-// import { terser } from 'rollup-plugin-terser'
-// const isProd = process.env.NODE_ENV === 'production'
+import { terser } from 'rollup-plugin-terser'
+const isProd = process.env.NODE_ENV === 'production'
 const isDev = process.env.NODE_ENV === 'development'
 
 /** @type {import('rollup').RollupOptions} */
@@ -14,14 +14,16 @@ const config = {
   output: [
     {
       file: pkg.main,
-      format: 'cjs',
+      format: 'umd',
       sourcemap: isDev,
-      exports: 'auto'
-    },
-    { format: 'esm', file: pkg.module, sourcemap: isDev }
+      exports: 'auto',
+      name: 'tailwindcss-core-plugins'
+    }
+    // { format: 'esm', file: pkg.module, sourcemap: isDev }
   ],
 
   plugins: [
+    isProd ? terser() : undefined,
     nodeResolve({
       preferBuiltins: true
     }),
