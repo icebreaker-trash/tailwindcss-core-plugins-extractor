@@ -1,7 +1,26 @@
 # tailwindcss-core-plugins-extractor
 
-npm view tailwindcss version
+> this version is refer to `tailwindcss@3.2.2`
 
-npm list --depth=0
+get all `tailwindcss` `corePlugins`!
 
-npm list -g --depth=0
+## Install
+
+```bash
+<npm | yarn | pnpm> i tailwindcss-core-plugins-extractor
+```
+
+## Usage
+
+```js
+// cjs
+const corePlugins = require('tailwindcss-core-plugins-extractor')
+// or esm
+import * as corePlugins from 'tailwindcss-core-plugins-extractor';
+
+// get corePlugins
+corePlugins.accentColor
+corePlugins.accessibility
+corePlugins.zIndex
+corePlugins.width
+```
