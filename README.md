@@ -23,4 +23,5 @@ corePlugins.accentColor
 corePlugins.accessibility
 corePlugins.zIndex
 corePlugins.width
+// ....
 ```
