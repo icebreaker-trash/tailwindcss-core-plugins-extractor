@@ -39,31 +39,8 @@ const config: RollupOptions = {
       },
       interop: 'compat',
       systemNullSetters: false
-    },
-    {
-      format: 'esm',
-      file: pkg.module,
-      sourcemap: isDev,
-      plugins: [
-        isProd
-          ? visualizer({
-            filename: 'stats/esm.html'
-          })
-          : undefined
-      ],
-      esModule: true,
-      generatedCode: {
-        reservedNamesAsProps: false
-      },
-      interop: 'compat',
-      systemNullSetters: false
     }
-    // {
-    //   dir: 'dist',
-    //   format: 'cjs',
-    //   sourcemap: isDev,
-    //   exports: 'auto'
-    // },
+
   ],
   makeAbsoluteExternalsRelative: true,
   preserveEntrySignatures: 'strict',
