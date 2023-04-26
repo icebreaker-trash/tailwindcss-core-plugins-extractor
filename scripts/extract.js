@@ -7,16 +7,15 @@ const screens = require('tailwindcss/defaultTheme').screens
 const corePlugins = require('tailwindcss/lib/corePlugins.js').corePlugins
 
 const keys = Object.keys(corePlugins)
-
+// https://github.com/tailwindlabs/tailwindcss.com
+// next.config.js
 function normalizeProperties (input) {
   if (typeof input !== 'object') return input
   if (Array.isArray(input)) return input.map(normalizeProperties)
   return Object.keys(input).reduce((newObj, key) => {
     const val = input[key]
     const newVal = typeof val === 'object' ? normalizeProperties(val) : val
-    newObj[
-      key.replace(/([a-z])([A-Z])/g, (m, p1, p2) => `${p1}-${p2.toLowerCase()}`)
-    ] = newVal
+    newObj[key.replace(/([a-z])([A-Z])/g, (m, p1, p2) => `${p1}-${p2.toLowerCase()}`)] = newVal
     return newObj
   }, {})
 }
@@ -45,6 +44,7 @@ function getUtilities (plugin, { includeNegativeValues = false } = {}) {
     addComponents: () => {},
     corePlugins: () => true,
     prefix: (x) => x,
+    config: (option, defaultValue) => (option ? defaultValue : { future: {} }),
     addUtilities,
     theme: (key, defaultValue) => dlv(defaultConfig.theme, key, defaultValue),
     matchUtilities: (matches, { values, supportsNegativeValues } = {}) => {
@@ -55,8 +55,7 @@ function getUtilities (plugin, { includeNegativeValues = false } = {}) {
       if (includeNegativeValues && supportsNegativeValues) {
         const negativeValues = []
         for (const [key, value] of modifierValues) {
-          const negatedValue =
-            require('tailwindcss/lib/util/negateValue').default(value)
+          const negatedValue = require('tailwindcss/lib/util/negateValue').default(value)
           if (negatedValue) {
             negativeValues.push([`-${key}`, negatedValue])
           }
@@ -64,30 +63,25 @@ function getUtilities (plugin, { includeNegativeValues = false } = {}) {
         modifierValues.push(...negativeValues)
       }
 
-      const result = Object.entries(matches).flatMap(
-        ([name, utilityFunction]) => {
-          return modifierValues
-            .map(([modifier, value]) => {
-              const declarations = utilityFunction(value, {
-                includeRules (rules) {
-                  addUtilities(rules)
-                }
-              })
-
-              if (!declarations) {
-                return null
-              }
-
-              return {
-                [require('tailwindcss/lib/util/nameClass').default(
-                  name,
-                  modifier
-                )]: declarations
+      const result = Object.entries(matches).flatMap(([name, utilityFunction]) => {
+        return modifierValues
+          .map(([modifier, value]) => {
+            const declarations = utilityFunction(value, {
+              includeRules (rules) {
+                addUtilities(rules)
               }
             })
-            .filter(Boolean)
-        }
-      )
+
+            if (!declarations) {
+              return null
+            }
+
+            return {
+              [require('tailwindcss/lib/util/nameClass').default(name, modifier)]: declarations
+            }
+          })
+          .filter(Boolean)
+      })
 
       for (const obj of result) {
         for (const key in obj) {
