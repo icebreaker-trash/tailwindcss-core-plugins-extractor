@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-core-plugins-extractor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "tailwindcss-core-plugins-extractor",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -21,7 +21,8 @@
     "ci:extract": "node scripts/extract.js",
     "ci:lint": "eslint --fix",
     "ci:check": "node scripts/check.js",
-    "ci:theme": "node scripts/theme.js"
+    "ci:theme": "node scripts/theme.js",
+    "sync": "cnpm sync tailwindcss-core-plugins-extractor"
   },
   "repository": {
     "type": "git",

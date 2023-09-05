@@ -5,6 +5,7 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import { RollupOptions } from 'rollup'
 import json from '@rollup/plugin-json'
 import { readFileSync } from 'node:fs'
+import terser from '@rollup/plugin-terser'
 const pkg = JSON.parse(
   readFileSync('./package.json', {
     encoding: 'utf8'
@@ -67,7 +68,8 @@ const config: RollupOptions = {
       preferBuiltins: true
     }),
     commonjs(),
-    typescript({ tsconfig: './tsconfig.build.json', sourceMap: isDev })
+    typescript({ tsconfig: './tsconfig.build.json', sourceMap: isDev }),
+    isProd ? terser() : undefined
   ],
   external: [...(dependencies ? Object.keys(dependencies) : [])]
 }
