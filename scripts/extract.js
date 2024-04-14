@@ -109,19 +109,23 @@ function getUtilities (plugin, { includeNegativeValues = false } = {}) {
   return utilities
 }
 
+function JSONStringify (data) {
+  return JSON.stringify(data, null, 2)
+}
+
 async function main () {
   const result = []
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i]
     const plugin = corePlugins[key]
-    const str = `export default ${JSON.stringify(getUtilities(plugin))}`
+    const str = `export default ${JSONStringify(getUtilities(plugin))}`
     await fs.writeFile(`./src/corePlugins/${key}.ts`, str, {
       encoding: 'utf-8'
     })
     result.push(`import ${key} from './corePlugins/${key}'`)
   }
 
-  const str = `export default ${JSON.stringify(screens)}`
+  const str = `export default ${JSONStringify(screens)}`
   await fs.writeFile('./src/theme/screens.ts', str, {
     encoding: 'utf-8'
   })

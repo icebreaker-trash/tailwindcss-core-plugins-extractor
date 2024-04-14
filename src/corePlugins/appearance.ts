@@ -1,1 +1,5 @@
-export default {".appearance-none":{"appearance":"none"}}
+export default {
+  ".appearance-none": {
+    "appearance": "none"
+  }
+}

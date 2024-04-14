@@ -1,1 +1,8 @@
-export default {".border-collapse":{"border-collapse":"collapse"},".border-separate":{"border-collapse":"separate"}}
+export default {
+  ".border-collapse": {
+    "border-collapse": "collapse"
+  },
+  ".border-separate": {
+    "border-collapse": "separate"
+  }
+}
