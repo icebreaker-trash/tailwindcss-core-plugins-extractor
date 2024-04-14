@@ -1,4 +1,10 @@
 export default {
+  ".clear-start": {
+    "clear": "inline-start"
+  },
+  ".clear-end": {
+    "clear": "inline-end"
+  },
   ".clear-left": {
     "clear": "left"
   },

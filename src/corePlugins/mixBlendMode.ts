@@ -47,6 +47,9 @@ export default {
   ".mix-blend-luminosity": {
     "mix-blend-mode": "luminosity"
   },
+  ".mix-blend-plus-darker": {
+    "mix-blend-mode": "plus-darker"
+  },
   ".mix-blend-plus-lighter": {
     "mix-blend-mode": "plus-lighter"
   }

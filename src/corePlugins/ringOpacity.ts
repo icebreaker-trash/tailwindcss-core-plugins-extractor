@@ -8,6 +8,9 @@ export default {
   ".ring-opacity-10": {
     "--tw-ring-opacity": "0.1"
   },
+  ".ring-opacity-15": {
+    "--tw-ring-opacity": "0.15"
+  },
   ".ring-opacity-20": {
     "--tw-ring-opacity": "0.2"
   },
@@ -17,14 +20,26 @@ export default {
   ".ring-opacity-30": {
     "--tw-ring-opacity": "0.3"
   },
+  ".ring-opacity-35": {
+    "--tw-ring-opacity": "0.35"
+  },
   ".ring-opacity-40": {
     "--tw-ring-opacity": "0.4"
+  },
+  ".ring-opacity-45": {
+    "--tw-ring-opacity": "0.45"
   },
   ".ring-opacity-50": {
     "--tw-ring-opacity": "0.5"
   },
+  ".ring-opacity-55": {
+    "--tw-ring-opacity": "0.55"
+  },
   ".ring-opacity-60": {
     "--tw-ring-opacity": "0.6"
+  },
+  ".ring-opacity-65": {
+    "--tw-ring-opacity": "0.65"
   },
   ".ring-opacity-70": {
     "--tw-ring-opacity": "0.7"
@@ -34,6 +49,9 @@ export default {
   },
   ".ring-opacity-80": {
     "--tw-ring-opacity": "0.8"
+  },
+  ".ring-opacity-85": {
+    "--tw-ring-opacity": "0.85"
   },
   ".ring-opacity-90": {
     "--tw-ring-opacity": "0.9"

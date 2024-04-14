@@ -8,6 +8,9 @@ export default {
   ".text-opacity-10": {
     "--tw-text-opacity": "0.1"
   },
+  ".text-opacity-15": {
+    "--tw-text-opacity": "0.15"
+  },
   ".text-opacity-20": {
     "--tw-text-opacity": "0.2"
   },
@@ -17,14 +20,26 @@ export default {
   ".text-opacity-30": {
     "--tw-text-opacity": "0.3"
   },
+  ".text-opacity-35": {
+    "--tw-text-opacity": "0.35"
+  },
   ".text-opacity-40": {
     "--tw-text-opacity": "0.4"
+  },
+  ".text-opacity-45": {
+    "--tw-text-opacity": "0.45"
   },
   ".text-opacity-50": {
     "--tw-text-opacity": "0.5"
   },
+  ".text-opacity-55": {
+    "--tw-text-opacity": "0.55"
+  },
   ".text-opacity-60": {
     "--tw-text-opacity": "0.6"
+  },
+  ".text-opacity-65": {
+    "--tw-text-opacity": "0.65"
   },
   ".text-opacity-70": {
     "--tw-text-opacity": "0.7"
@@ -34,6 +49,9 @@ export default {
   },
   ".text-opacity-80": {
     "--tw-text-opacity": "0.8"
+  },
+  ".text-opacity-85": {
+    "--tw-text-opacity": "0.85"
   },
   ".text-opacity-90": {
     "--tw-text-opacity": "0.9"

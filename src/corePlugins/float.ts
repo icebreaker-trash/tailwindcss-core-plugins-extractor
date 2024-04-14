@@ -1,4 +1,10 @@
 export default {
+  ".float-start": {
+    "float": "inline-start"
+  },
+  ".float-end": {
+    "float": "inline-end"
+  },
   ".float-right": {
     "float": "right"
   },

@@ -37,5 +37,8 @@ export default {
   },
   ".grid-cols-none": {
     "grid-template-columns": "none"
+  },
+  ".grid-cols-subgrid": {
+    "grid-template-columns": "subgrid"
   }
 }

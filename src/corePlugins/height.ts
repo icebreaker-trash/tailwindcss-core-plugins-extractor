@@ -158,6 +158,15 @@ export default {
   ".h-screen": {
     "height": "100vh"
   },
+  ".h-svh": {
+    "height": "100svh"
+  },
+  ".h-lvh": {
+    "height": "100lvh"
+  },
+  ".h-dvh": {
+    "height": "100dvh"
+  },
   ".h-min": {
     "height": "min-content"
   },

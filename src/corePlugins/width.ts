@@ -191,6 +191,15 @@ export default {
   ".w-screen": {
     "width": "100vw"
   },
+  ".w-svw": {
+    "width": "100svw"
+  },
+  ".w-lvw": {
+    "width": "100lvw"
+  },
+  ".w-dvw": {
+    "width": "100dvw"
+  },
   ".w-min": {
     "width": "min-content"
   },

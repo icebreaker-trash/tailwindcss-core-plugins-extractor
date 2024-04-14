@@ -113,6 +113,15 @@ export default {
   ".max-h-screen": {
     "max-height": "100vh"
   },
+  ".max-h-svh": {
+    "max-height": "100svh"
+  },
+  ".max-h-lvh": {
+    "max-height": "100lvh"
+  },
+  ".max-h-dvh": {
+    "max-height": "100dvh"
+  },
   ".max-h-min": {
     "max-height": "min-content"
   },

@@ -20,6 +20,24 @@ export default {
   ".row-start-7": {
     "grid-row-start": "7"
   },
+  ".row-start-8": {
+    "grid-row-start": "8"
+  },
+  ".row-start-9": {
+    "grid-row-start": "9"
+  },
+  ".row-start-10": {
+    "grid-row-start": "10"
+  },
+  ".row-start-11": {
+    "grid-row-start": "11"
+  },
+  ".row-start-12": {
+    "grid-row-start": "12"
+  },
+  ".row-start-13": {
+    "grid-row-start": "13"
+  },
   ".row-start-auto": {
     "grid-row-start": "auto"
   }
